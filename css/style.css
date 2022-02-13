@@ -1,0 +1,290 @@
+:root {
+    --accent: #6ceec7;
+    --placeholder: #E0E0E0;
+    --white: #ffffff;
+    --dark: #000000;
+    --form-control-size: 19px;
+    --form-control-lh: 22px
+}
+
+body {
+    color: var(--white);
+}
+
+a {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+.main-bg {
+    background: url("../assets/img-bgs/bg-1.jpg") center no-repeat;
+}
+
+.main-bg:before {
+    display: inline-block;
+}
+
+.header {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+/* Button */
+
+.btn {
+    font-size: var(--form-control-size);
+    font-weight: 500;
+    line-height: var(--form-control-lh);
+}
+
+.btn-accent {
+    background-color: var(--accent);
+}
+
+.btn-accent:hover {
+    background-color: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-outline-accent {
+    background-color: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-outline-accent:hover {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--dark);
+}
+
+.text-accent {
+    color: var(--accent);
+}
+
+
+/*link*/
+
+.link-primary-lime {
+    color: var(--white);
+}
+
+.link-primary-lime:hover {
+    color: var(--accent);
+}
+
+
+/*checknox*/
+
+.checkbox-style {
+    border: 1px solid var(--accent);
+    display: inline-block;
+    height: 20px;
+    margin-right: 5px;
+    position: relative;
+    vertical-align: top;
+    width: 20px;
+    border-radius: 3px;
+}
+
+.checkbox-style:after {
+    content: '';
+    left: 5px;
+    top: 1px;
+    position: absolute;
+    opacity: 0;
+    transform: rotate( 45deg);
+    height: 12px;
+    width: 7px;
+    border-bottom: 2px solid var(--dark);
+    border-right: 2px solid var(--dark);
+}
+
+input[type="checkbox"]:checked~.checkbox-style:after {
+    opacity: 100;
+}
+
+.invalid-feedback {
+    text-align: end;
+    display: block;
+}
+
+.form-control:hover {
+    background: rgba(0, 0, 0, 0);
+    color: #3a7999;
+    box-shadow: inset 0 0 0 1px red;
+}
+
+.link-primary {
+    color: var(--accent);
+}
+
+.form-check-input:checked {
+    background-color: var(--accent);
+    border-color: var(--accent);
+}
+
+.form-check-input {
+    background-color: var(--accent);
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+.form-label:valid {
+    color: red;
+    max-width: 12px;
+}
+
+
+/*//////*/
+
+
+/* The container */
+
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom checkbox */
+
+.container-checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--accent);
+    border-radius: 3px;
+}
+
+
+/* On mouse-over, add a accent background color */
+
+.container-checkbox:hover input~.checkmark {
+    background-color: var(--accent);
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.container-checkbox input:checked~.checkmark {
+    background-color: var(--accent);
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.container-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.container-checkbox input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.container-checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid var(--dark);
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* 
+.bg-forms1 {
+    position: absolute;
+    top: -36px;
+    right: 364px;
+}
+
+.bg-forms2 {
+    position: absolute;
+    left: -77px;
+    top: 228px;
+}
+
+.bg-forms3 {
+    position: absolute;
+    top: 580px;
+    right: -48px;
+} */
+
+.form-control-light {
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.form-control-light:focus {
+    color: var(--white);
+}
+
+.form-control-light::placeholder {
+    color: var(--placeholder);
+}
+
+.form-control,
+.form-control::placeholder,
+.form-control:focus {
+    font-size: var(--form-control-size);
+    font-weight: 300;
+    background-color: transparent;
+    color: var(--accent);
+}
+
+.form-control:hover {
+    box-shadow: none;
+    color: var(--white);
+}
+
+
+/* ICONS */
+
+.icon {
+    padding-left: 50px;
+}
+
+.icon-person {
+    background: url(/assets/icons/person.svg) 15px center no-repeat;
+}
+
+
+/* @media*/
